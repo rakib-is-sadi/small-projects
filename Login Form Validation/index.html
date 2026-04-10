@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="./output.css" rel="stylesheet">
+  <title>Login Form Validation</title>
+</head>
+<body class="h-screen bg-[url(https://png.pngtree.com/background/20250319/original/pngtree-wood-lake-wild-green-nature-background-picture-image_16335506.jpg)] bg-no-repeat bg-center bg-cover flex justify-center items-center">
+  <form class="backdrop-blur-xs bg-white/10 p-4 rounded-xl w-60 border border-white">
+
+    <!-- Login Div -->
+    <div id="login-div" class="flex flex-col justify-center items-center">
+      <h2 class="font-semibold text-xl mb-4 text-white">Login</h2>
+
+      <div class="relative w-full h-8 border border-white rounded-3xl mb-3.5 flex items-center">
+        <input type="email" id="login-email" class="w-full h-full outline-none text-[10px] text-white ml-3 pr-8 rounded-3xl" name="user_email" placeholder="Enter Your Email" autocomplete="off">
+        <i class="absolute fa-solid fa-user right-3 text-[10px] text-white"></i>
+      </div>
+
+      <div class="relative w-full h-8 border border-white rounded-3xl mb-3 flex items-center">
+        <input type="password" id="login-pass" class="w-full h-full pass outline-none text-[10px] text-white ml-3 pr-8 rounded-3xl" name="user_pass" placeholder="Enter Your Password" autocomplete="new-password">
+        <i class="absolute lock fa-solid fa-eye-slash cursor-pointer right-3 text-[10px] text-white"></i>
+      </div>
+
+      <div class="flex justify-between items-center w-full mb-3">
+        <span class="flex items-center gap-1">
+          <input type="checkbox" class="w-2.5 h-2.5">
+          <p class="text-[10px] text-white">Remember me</p>
+        </span>
+        <a href="" id="forgot-link" class="text-[10px] underline text-blue-400">Forgot Password?</a>
+      </div>
+
+      <button type="button" id="login-btn" class="w-full bg-green-700 hover:bg-green-800 duration-300 text-white font-semibold py-1 rounded-3xl cursor-pointer mb-3">Login</button>
+      <p class="text-[10px] text-white">Don't have an account? <a href="" id="register-link" class="underline text-blue-300">Register</a></p>
+    </div>
+
+
+
+
+    <!-- forgot Div -->
+
+        <div id="forgot-div" class="flex flex-col justify-center items-center">
+      <h2 class="font-semibold text-xl mb-4 text-white">Update Password</h2>
+
+
+       <div class="relative w-full h-8 border border-white rounded-3xl mb-3.5 flex items-center">
+        <input type="email" id="forgot-email" class="w-full h-full outline-none text-[10px] text-white ml-3 pr-8 rounded-3xl" name="user_email" placeholder="Enter Your Email" autocomplete="off">
+        <i class="absolute fa-solid fa-user right-3 text-[10px] text-white"></i>
+      </div>
+
+
+      <div class="relative w-full h-8 border border-white rounded-3xl mb-3.5 flex items-center">
+        <input type="password" id="new-pass" class="w-full h-full pass outline-none text-[10px] text-white ml-3 pr-8 rounded-3xl" name="password" placeholder="New Password" autocomplete="off">
+        <i class="absolute lock fa-solid fa-eye-slash cursor-pointer right-3 text-[10px] text-white"></i>
+
+      </div>
+
+      <div class="relative w-full h-8 border border-white rounded-3xl mb-4 flex items-center">
+        <input type="password" id="confirm-pass" class="w-full h-full pass outline-none text-[10px] text-white ml-3 pr-8 rounded-3xl" name="user_pass" placeholder="Confirm Password" autocomplete="new-password">
+        <i class="absolute lock fa-solid fa-eye-slash cursor-pointer right-3 text-[10px] text-white"></i>
+      </div>
+
+      <button type="button" id="update" class="w-full bg-yellow-700 hover:bg-yellow-800 duration-300 text-white font-semibold py-1 rounded-3xl cursor-pointer">Update</button>
+
+    </div>
+
+
+
+
+
+    <!-- Register Div (hidden by default) -->
+    <div id="register-div" class="flex flex-col justify-center items-center">
+<h2 class="font-semibold text-xl mb-4 text-white">Register</h2>
+
+      <div class="relative w-full h-8 border border-white rounded-3xl mb-3.5 flex items-center">
+        <input type="email" id="email" class="w-full h-full outline-none text-[10px] text-white ml-3 pr-8 rounded-3xl" name="user_email" placeholder="Enter Your Email" autocomplete="off">
+        <i class="absolute fa-solid fa-user right-3 text-[10px] text-white"></i>
+      </div>
+
+      <div class="relative w-full h-8 border border-white rounded-3xl mb-4 flex items-center">
+        <input type="password" id="password" class="w-full h-full pass outline-none text-[10px] text-white ml-3 pr-8 rounded-3xl" name="user_pass" placeholder="Enter Your Password" autocomplete="new-password">
+        <i class="absolute lock fa-solid fa-eye-slash cursor-pointer right-3 text-[10px] text-white"></i>
+      </div>
+
+      <button type="button" id="sign-up" class="w-full bg-blue-700 hover:bg-blue-800 duration-300 text-white font-semibold py-1 rounded-3xl cursor-pointer mb-3">Sign up</button>
+
+      <p class="text-white hover:text-gray-300 duration-200 text-[10px]"><a href="" id="back" class="underline">back to login →</a>
+      </p>
+
+    </div>
+
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

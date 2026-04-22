@@ -58,3 +58,26 @@ clear.addEventListener("click", () => {
   pre.innerText = 0;
   btnValues = "";
 });
+
+
+// light Function
+
+
+function lightTheme() {
+
+}
+
+let theme = document.querySelector(".theme");
+let swtc = document.querySelector(".switch");
+let check = 0;
+theme.addEventListener("click", () => {
+  if(check === 0) {
+    theme.style.justifyContent = "end";
+    document.body.classList.add("light")
+    check = 1;
+  } else {
+    theme.style.justifyContent = "start";
+    document.body.classList.remove("light")
+    check = 0;
+  }
+})
